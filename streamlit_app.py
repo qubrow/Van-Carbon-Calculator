@@ -81,7 +81,7 @@ def main():
     st.markdown("-Cooktop or portable stove: 5–15 lbs")
     st.markdown("-Solar power system (panels, batteries, inverter): 100–300 lbs")
     st.markdown("-Heater/air conditioning unit: 30–60 lbs")
-    st.markdown("-Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs")
+    st.markdown("-Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)")
     st.markdown("-Gray water tank: Similar weight, depending on size")
     st.markdown("-Clothing/Toiletries/Entertainment: 40–120 lbs")
     st.markdown("-Food supplies: 20–60 lbs")
