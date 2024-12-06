@@ -81,7 +81,7 @@ def main():
     st.info("    Heater/air conditioning unit: 30–60 lbs")
     st.info("    Water pump or filtration system: 5–10 lbs")
     st.info("Water and Plumbing")
-    st.info("    Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~166 lbs)
+    st.info("    Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~166 lbs")
     st.info("    Gray water tank: Similar weight, depending on size")
     st.info("    Plumbing materials (hoses, fittings): 10–20 lbs")")
     st.info("Personal Items")
