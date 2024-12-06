@@ -70,21 +70,21 @@ def main():
     st.info("An average van will get 17.8 mpg according to the US Department of Energy, although this will depend on brand, wear, and maintenance.")
     has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     
-    weight_help_text = (
-    "-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)\n"
-    "-Cabinets and storage units: 50–150 lbs\n"
-    "-Table and seating: 40–100 lbs\n"
-    "-Refrigerator: 40–60 lbs\n"
-    "-Cooktop or portable stove: 5–15 lbs\n"
-    "-Solar power system (panels, batteries, inverter): 100–300 lbs\n"
-    "-Heater/air conditioning unit: 30–60 lbs\n"
-    "-Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)\n"
-    "-Gray water tank: Similar weight, depending on size\n"
-    "-Clothing/Toiletries/Entertainment: 40–120 lbs\n"
-    "-Food supplies: 20–60 lbs\n"
-    "-Outdoor gear, such as climbing gear: 20-100+ lbs\n"
-    "-Insulation materials: 50–150 lbs\n"
-    )
+    weight_help_text = """
+    -Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)  
+    -Cabinets and storage units: 50–150 lbs  
+    -Table and seating: 40–100 lbs  
+    -Refrigerator: 40–60 lbs  
+    -Cooktop or portable stove: 5–15 lbs  
+    -Solar power system (panels, batteries, inverter): 100–300 lbs  
+    -Heater/air conditioning unit: 30–60 lbs  
+    -Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)   
+    -Gray water tank: Similar weight, depending on size  
+    -Clothing/Toiletries/Entertainment: 40–120 lbs  
+    -Food supplies: 20–60 lbs  
+    -Outdoor gear, such as climbing gear: 20-100+ lbs  
+    -Insulation materials: 50–150 lbs  
+    """
     
     added_weight = st.number_input("Enter Additional Weight (in pounds)", help=weight_help_text, min_value=0, step=10)
     st.info("CAT scales, typically found at truck stops, can tell you exactly how much your van weighs. Going over your van's GVWR (Gross Vehicle Weight Rating) can result in vehicle damage")
