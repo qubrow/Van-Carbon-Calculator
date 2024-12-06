@@ -83,7 +83,7 @@ def main():
     st.info("Water and Plumbing")
     st.info("    Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~166 lbs")
     st.info("    Gray water tank: Similar weight, depending on size")
-    st.info("    Plumbing materials (hoses, fittings): 10–20 lbs")")
+    st.info("    Plumbing materials (hoses, fittings): 10–20 lbs")
     st.info("Personal Items")
     st.info("    Clothing: 20–40 lbs")
     st.info("    Toiletries: 5–15 lbs")
