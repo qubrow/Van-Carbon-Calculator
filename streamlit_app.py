@@ -71,6 +71,7 @@ def main():
     has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     
     help_text = (
+    "-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)"\n
     "- Cabinets and storage units: 50–150 lbs\n"
     "- Table and seating: 40–100 lbs\n"
     "-Refrigerator: 40–60 lbs\n"
@@ -85,24 +86,12 @@ def main():
     "-Insulation materials: 50–150 lbs\n"
     )
     
-    added_weight = st.number_input("Enter Added Weight (in pounds)", help=help_text, min_value=0, step=10)
+    added_weight = st.number_input("Enter Additional Weight (in pounds)", help=help_text, min_value=0, step=10)
     st.info("CAT scales, typically found at truck stops, can tell you exactly how much your van weighs. Going over your van's GVWR (Gross Vehicle Weight Rating) can result in vehicle damage")
     st.info("A minimalist setup might add around 500–800 lbs.")
     st.info("A larger build out could add 1500 to 2500+ lbs.")
-    st.info("Some common things that might add weight in your van:")
-    st.markdown("-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)")
-    st.markdown("")
-    st.markdown("")
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
-    st.markdown()
+    st.info("Some common things that might add weight in your van - hover over the ? icon next to additional weight")
+
 
     if st.button("Calculate Emissions"):
         if st.session_state.distance:
