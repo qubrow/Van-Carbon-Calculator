@@ -70,10 +70,18 @@ def main():
     added_weight = st.number_input("Enter Added Weight (in pounds)", min_value=0, step=10)
     st.info("CAT scales, typically found at truck stops, can tell you exactly how much your van weighs. Going over your van's GVWR (Gross Vehicle Weight Rating) can result in vehicle damage")
     st.info("Some common things that might add weight in your van:")
-    st.info("Furniture/Comfort")
-    st.info("    Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs")
-    st.info("    Cabinets and storage units: 50–150 lbs")
-    st.info("    Table and seating: 40–100 lbs")
+    st.write("Furniture/Comfort")
+    st.markdown("-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)")
+    st.markdown("-Cabinets and storage units: 50–150 lbs")
+    st.markdown("-Table and seating: 40–100 lbs")
+    st.markdown('''
+    <style>
+    [data-testid="stMarkdownContainer"] ul{
+    list-style-position: inside;
+    }
+    </style>
+    ''', unsafe_allow_html=True)
+    
     st.info("Appliances")
     st.info("    Refrigerator: 40–60 lbs")
     st.info("    Cooktop or portable stove: 5–15 lbs")
