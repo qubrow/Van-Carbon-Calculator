@@ -100,7 +100,7 @@ def main():
                 fuel_type.lower(), st.session_state.distance, fuel_efficiency, added_weight, has_cartop_carrier
             )
             st.success(f"Total Emissions: {emissions:.2f} kg CO₂")
-            st.info(f"Adjusted Fuel Efficiency: {adjusted_efficiency:.2f} MPG")
+            st.info(f"Adjusted Fuel Efficiency from inputs: {adjusted_efficiency:.2f} MPG")
             avg_emission_per_mile = 0.404  # Average for gasoline cars in kg CO₂ per mile. From https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle#driving
             user_emission_per_mile = emissions / st.session_state.distance if st.session_state.distance else None
             if user_emission_per_mile:
