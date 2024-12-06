@@ -74,13 +74,7 @@ def main():
     st.markdown("-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)")
     st.markdown("-Cabinets and storage units: 50–150 lbs")
     st.markdown("-Table and seating: 40–100 lbs")
-    st.markdown('''
-    <style>
-    [data-testid="stMarkdownContainer"] ul{
-    list-style-position: inside;
-    }
-    </style>
-    ''', unsafe_allow_html=True)
+    
     
     st.info("Appliances")
     st.info("    Refrigerator: 40–60 lbs")
