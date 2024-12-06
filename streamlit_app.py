@@ -72,8 +72,8 @@ def main():
     
     weight_help_text = (
     "-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)\n"
-    "- Cabinets and storage units: 50–150 lbs\n"
-    "- Table and seating: 40–100 lbs\n"
+    "-Cabinets and storage units: 50–150 lbs\n"
+    "-Table and seating: 40–100 lbs\n"
     "-Refrigerator: 40–60 lbs\n"
     "-Cooktop or portable stove: 5–15 lbs\n"
     "-Solar power system (panels, batteries, inverter): 100–300 lbs\n"
