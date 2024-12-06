@@ -73,6 +73,16 @@ def main():
     help_text = (
     "- Cabinets and storage units: 50–150 lbs\n"
     "- Table and seating: 40–100 lbs\n"
+    "-Refrigerator: 40–60 lbs\n"
+    "-Cooktop or portable stove: 5–15 lbs\n"
+    "-Solar power system (panels, batteries, inverter): 100–300 lbs\n"
+    "-Heater/air conditioning unit: 30–60 lbs\n"
+    "-Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)\n"
+    "-Gray water tank: Similar weight, depending on size\n"
+    "-Clothing/Toiletries/Entertainment: 40–120 lbs\n"
+    "-Food supplies: 20–60 lbs\n"
+    "-Outdoor gear, such as climbing gear: 20-100+ lbs\n"
+    "-Insulation materials: 50–150 lbs\n"
     )
     
     added_weight = st.number_input("Enter Added Weight (in pounds)", help=help_text, min_value=0, step=10)
@@ -83,16 +93,16 @@ def main():
     st.markdown("-Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)")
     st.markdown("")
     st.markdown("")
-    st.markdown("-Refrigerator: 40–60 lbs")
-    st.markdown("-Cooktop or portable stove: 5–15 lbs")
-    st.markdown("-Solar power system (panels, batteries, inverter): 100–300 lbs")
-    st.markdown("-Heater/air conditioning unit: 30–60 lbs")
-    st.markdown("-Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)")
-    st.markdown("-Gray water tank: Similar weight, depending on size")
-    st.markdown("-Clothing/Toiletries/Entertainment: 40–120 lbs")
-    st.markdown("-Food supplies: 20–60 lbs")
-    st.markdown("-Outdoor gear, such as climbing gear: 20-100+ lbs")
-    st.markdown("-Insulation materials: 50–150 lbs")
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
+    st.markdown()
 
     if st.button("Calculate Emissions"):
         if st.session_state.distance:
