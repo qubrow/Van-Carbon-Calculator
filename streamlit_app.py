@@ -90,7 +90,7 @@ def main():
     st.info("CAT scales, typically found at truck stops, can tell you exactly how much your van weighs. Going over your van's GVWR (Gross Vehicle Weight Rating) can result in vehicle damage")
     st.info("A minimalist setup might add around 500–800 lbs.")
     st.info("A larger build out could add 1500 to 2500+ lbs.")
-    st.info("Some common things that might add weight in your van - hover over the ? icon next to additional weight")
+    st.info("For some common things that might add weight in your van: \nhover over the ? icon next to additional weight")
 
 
     if st.button("Calculate Emissions"):
