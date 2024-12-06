@@ -68,6 +68,7 @@ def main():
     fuel_type = st.selectbox("Select Fuel Type", ["Gasoline", "Diesel"])
     fuel_efficiency = st.number_input("Enter Fuel Efficiency (MPG)", min_value=10.0, step=1.0)
     st.info("An average van will get 17.8 mpg according to the US Department of Energy, although this will depend on brand, wear, and maintenance.")
+    has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     added_weight = st.number_input("Enter Added Weight (in pounds)", min_value=0, step=10)
     st.info("CAT scales, typically found at truck stops, can tell you exactly how much your van weighs. Going over your van's GVWR (Gross Vehicle Weight Rating) can result in vehicle damage")
     st.info("A minimalist setup might add around 500–800 lbs.")
@@ -86,8 +87,6 @@ def main():
     st.markdown("-Food supplies: 20–60 lbs")
     st.markdown("-Outdoor gear, such as climbing gear: 20-100+ lbs")
     st.markdown("-Insulation materials: 50–150 lbs")
-    
-    has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
 
     if st.button("Calculate Emissions"):
         if st.session_state.distance:
