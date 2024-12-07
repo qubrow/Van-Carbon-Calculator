@@ -1,5 +1,8 @@
 import streamlit as st
 import openrouteservice
+import folium
+from streamlit_folium import st_folium
+
 
 # Initialize OpenRouteService client
 API_KEY = "5b3ce3597851110001cf6248a897a61867d9463189200028fa430a67"  # Replace with your ORS API key
@@ -25,10 +28,29 @@ def get_distance_ors(start_city, end_city):
         route = client.directions(coordinates=[tuple(start_coords), tuple(end_coords)], profile="driving-car")
         distance_meters = route["routes"][0]["summary"]["distance"]  # Distance in meters
         distance_miles = distance_meters / 1609.34  # Convert to miles
-        return distance_miles, f"{distance_miles:.2f} miles"
+        route_geometry = route["features"][0]["geometry"]["coordinates"]
+        return distance_miles, f"{distance_miles:.2f} miles", start_coords, end_coords, route_geometry
     except Exception as e:
         st.error(f"Failed to calculate distance. Make sure city names are spelled correctly. Spelling out state name isntead of abbreviating may work better.")
 
+def create_route_map(start_coords, end_coords, route_geometry):
+    # Create a folium map centered between start and end points
+    midpoint = [(start_coords[1] + end_coords[1]) / 2, (start_coords[0] + end_coords[0]) / 2]
+    route_map = folium.Map(location=midpoint, zoom_start=6)
+    
+    # Add start and end markers
+    folium.Marker(location=[start_coords[1], start_coords[0]], popup="Start").add_to(route_map)
+    folium.Marker(location=[end_coords[1], end_coords[0]], popup="End").add_to(route_map)
+    
+    # Add the route as a Polyline
+    folium.PolyLine(
+        locations=[[point[1], point[0]] for point in route_geometry],
+        color="blue",
+        weight=5,
+        opacity=0.8,
+    ).add_to(route_map)
+    
+    return route_map
 
 def calculate_emissions(fuel_type, distance, fuel_efficiency, added_weight, has_cartop_carrier):
     weight_penalty = (added_weight / 100) * 1.5
@@ -55,10 +77,13 @@ def main():
     # Distance calculation
     if st.button("Calculate Distance"):
         if start_city and end_city:
-            distance, distance_text = get_distance_ors(start_city, end_city)
+            distance, distance_text, start_coords, end_coords, route_geometry = get_distance_ors(start_city, end_city)
             if distance:
                 st.session_state.distance = distance
                 st.success(f"The distance between {start_city} and {end_city} is {distance_text}.")
+                # Create and display the map
+                route_map = create_route_map(start_coords, end_coords, route_geometry)
+                st_folium(route_map, width=700, height=500)
             else:
                 st.error(distance_text)
         else:
