@@ -45,8 +45,8 @@ def main():
     st.write("Calculate the carbon emissions for your trips.")
 
     # Input for cities
-    start_city = st.text_input("Enter Starting City, or the Closest City to your Destination", help="Type the name of the city you're starting from, and the state. Ex: New York City, New York")
-    end_city = st.text_input("Enter Destination City, or the Closest City to your Destination", help="Type your destination city, and the state. Ex: Denver, Colorado")
+    start_city = st.text_input("Enter Starting City, or the Closest City to your Destination. Ex: New York City, New York", help="Type the name of the city you're starting from, and the state. Ex: New York City, New York")
+    end_city = st.text_input("Enter Destination City, or the Closest City to your Destination. Ex: Denver, Colorado", help="Type your destination city, and the state. Ex: Denver, Colorado")
 
     # Ensure distance persistence
     if "distance" not in st.session_state:
