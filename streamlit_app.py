@@ -72,19 +72,19 @@ def main():
     has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     
     weight_help_text = """
-    -Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)  
-    -Cabinets and storage units: 50–150 lbs  
-    -Table and seating: 40–100 lbs  
-    -Refrigerator: 40–60 lbs  
-    -Cooktop or portable stove: 5–15 lbs  
-    -Solar power system (panels, batteries, inverter): 100–300 lbs  
-    -Heater/air conditioning unit: 30–60 lbs  
-    -Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)   
-    -Gray water tank: Similar weight, depending on size  
-    -Clothing/Toiletries/Entertainment: 40–120 lbs  
-    -Food supplies: 20–60 lbs  
-    -Outdoor gear, such as climbing gear: 20-100+ lbs  
-    -Insulation materials: 50–150 lbs  
+    Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)  
+    Cabinets and storage units: 50–150 lbs  
+    Table and seating: 40–100 lbs  
+    Refrigerator: 40–60 lbs  
+    Cooktop or portable stove: 5–15 lbs  
+    Solar power system (panels, batteries, inverter): 100–300 lbs  
+    Heater/air conditioning unit: 30–60 lbs  
+    Water tank (filled): 8.3 lbs per gallon (20-gallon tank = ~170 lbs)   
+    Gray water tank: Similar weight, depending on size  
+    Clothing/Toiletries/Entertainment: 40–120 lbs  
+    Food supplies: 20–60 lbs  
+    Outdoor gear, such as climbing gear: 20-100+ lbs  
+    Insulation materials: 50–150 lbs  
     """
     
     added_weight = st.number_input("Enter Additional Weight (in pounds)", help=weight_help_text, min_value=0, step=10)
