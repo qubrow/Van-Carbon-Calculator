@@ -12,5 +12,5 @@
 2. Run the app
 
    ```
-   $ streamlit run Final_calculator.py
+   $ streamlit run streamlit_app.py
    ```
