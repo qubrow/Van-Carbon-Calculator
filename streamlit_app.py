@@ -77,7 +77,7 @@ def main():
     # Distance calculation
     if st.button("Calculate Distance"):
         if start_city and end_city:
-            distance, distance_text = get_distance_ors(start_city, end_city), start_coords, end_coords, route_geometry = get_distance_ors(start_city, end_city)
+            distance, distance_text = get_distance_ors(start_city, end_city), start_coords, end_coords, route_geometry
             if distance:
                 st.session_state.distance = distance
                 st.success(f"The distance between {start_city} and {end_city} is {distance_text}.")
