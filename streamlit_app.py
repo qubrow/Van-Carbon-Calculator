@@ -27,7 +27,7 @@ def get_distance_ors(start_city, end_city):
         distance_miles = distance_meters / 1609.34  # Convert to miles
         return distance_miles, f"{distance_miles:.2f} miles"
     except Exception as e:
-        return None, f"Error: {e}"
+        st.error(f"Failed to calculate distance. Make sure city names are spelled correctly. Spelling out state name isntead of abbreviating may work better.")
 
 
 def calculate_emissions(fuel_type, distance, fuel_efficiency, added_weight, has_cartop_carrier):
@@ -66,7 +66,7 @@ def main():
 
     # Emissions calculation
     fuel_type = st.selectbox("Select Fuel Type", ["Gasoline", "Diesel"])
-    fuel_efficiency = st.number_input("Enter Fuel Efficiency (MPG)", min_value=10.0, step=1.0)
+    fuel_efficiency = st.number_input("Enter Fuel Efficiency (MPG)", min_value=1.0, step=1.0, value=17.8)
     st.info("An average van will get 17.8 mpg according to the US Department of Energy, although this will depend on brand, wear, and maintenance.")
     has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     
