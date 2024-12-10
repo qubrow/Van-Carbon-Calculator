@@ -28,7 +28,7 @@ def get_distance_ors(start_city, end_city):
         distance_miles = distance_meters / 1609.34  # Convert to miles
         return distance_miles, f"{distance_miles:.2f} miles"
     except Exception as e:
-        st.error(f"Failed to calculate distance. Make sure city names are spelled correctly. Spelling out state name isntead of abbreviating may work better.")
+        st.error(f"Failed to calculate distance. Make sure city names are spelled correctly. Spelling out state names instead of abbreviating may work better.")
 
 
 def calculate_emissions(fuel_type, distance, fuel_efficiency, added_weight, has_cartop_carrier):
@@ -46,8 +46,8 @@ def main():
     st.write("Calculate the carbon emissions for your trips.")
 
     # Input for cities
-    start_city = st.text_input("Enter Starting City, or the Closest City to your Destination. Ex: New York City, New York", help="Type the name of the city you're starting from, and the state. Ex: New York City, New York")
-    end_city = st.text_input("Enter Destination City, or the Closest City to your Destination. Ex: Denver, Colorado", help="Type your destination city, and the state. Ex: Denver, Colorado")
+    start_city = st.text_input("Enter Starting City, or the Closest City to your Destination. E.g. New York City, New York", help="Type the name of the city you're starting from, and the state. E.g. New York City, New York")
+    end_city = st.text_input("Enter Destination City, or the Closest City to your Destination. E.g. Denver, Colorado", help="Type your destination city, and the state. E.g. Denver, Colorado")
 
     # Ensure distance persistence
     if "distance" not in st.session_state:
