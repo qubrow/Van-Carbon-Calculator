@@ -72,7 +72,7 @@ def main():
     has_cartop_carrier = st.checkbox("Do you have a cartop carrier?")
     
     weight_help_text = """
-    Cartop Carrier: ~60 lbs
+    Cartop Carrier: ~60 lbs  
     Bed frame and mattress: 80–150 lbs (mattress: ~50 lbs; frame: 30–100 lbs)  
     Cabinets and storage units: 50–150 lbs  
     Table and seating: 40–100 lbs  
